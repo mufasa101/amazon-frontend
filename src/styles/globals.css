@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .link {
+        @apply cursor-pointer hover:underline active:transform active:scale-90 active:no-underline;
+    }
+
+    .amazon-button {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-yellow-200 to-yellow-400 border border-yellow-300 rounded-sm hover:from-yellow-300 focus:outline-none focus:ring-1 focus:ring-yellow-500 active:from-yellow-500 active:transform active:scale-90;
+    }
+    .illegal-button {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-gray-200 to-gray-400 border border-gray-300 rounded-sm hover:from-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-500 active:from-gray-500 active:transform active:scale-90 cursor-not-allowed;
+    }
+
+    .growing-hover {
+        @apply transition-transform duration-300 transform origin-bottom scale-100 hover:scale-105;
+    }
+}
