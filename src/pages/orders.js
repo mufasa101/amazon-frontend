@@ -1,5 +1,5 @@
 import { getSession, useSession } from "next-auth/client";
-import { db } from "../../firebase";
+import { db } from "../../Firebase";
 import Header from "../components/Header";
 import Order from "../components/Order";
 import moment from "moment";
