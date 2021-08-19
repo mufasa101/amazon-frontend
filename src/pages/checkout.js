@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useSelector } from "react-redux";
-import CheckOutProduct from "../components/CheckOutProduct";
+import CheckOutProduct from "../components/Checkoutproduct";
 import Header from "../components/Header";
 import { selectItems, selectTotal } from "../slices/basketSlice";
 import Currency from "react-currency-formatter";
