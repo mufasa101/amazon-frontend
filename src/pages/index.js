@@ -5,7 +5,7 @@ import ProductFeed from "../components/ProductFeed";
 import { useState } from "react";
 import { getSession } from "next-auth/client";
 
-export default function Home({ products,products_categories }) {
+export default function Home({ products }) {
     const [filteredProducts, setProducts] = useState(products);
 
     function filterProducts(searchText) {
@@ -31,7 +31,7 @@ export default function Home({ products,products_categories }) {
             </Head>
 
             {/* Header */}
-            <Header onSearchValue={filterProducts} categories={products_categories} onClickCategory={filterProductsCategory}/>
+            <Header onSearchValue={filterProducts} onClickCategory={filterProductsCategory}/>
 
             <main className="max-w-screen-2xl mx-auto">
                 <Banner />
@@ -54,11 +54,8 @@ export default function Home({ products,products_categories }) {
 // Here, it's executed by Node.js
 export async function getServerSideProps(context) {
     const session = await getSession(context);
-    const products_categories = await fetch("https://fakestoreapi.com/products/categories").then(
-        (res) => res.json()
-    );
     const products = await fetch("https://fakestoreapi.com/products").then(
         (res) => res.json()
     );
-    return { props: { products_categories,session,products } };
+    return { props: { session,products } };
 }
