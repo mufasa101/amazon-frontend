@@ -65,11 +65,16 @@ function Header(props) {
           <MenuIcon className="h-7 mr-1" />
           All
         </p>
+        <p className="link" onClick ={(event) => router.route === "/" && props.onClickCategory('electronics')}>electronics</p>
+        <p className="link" onClick ={(event) => router.route === "/" && props.onClickCategory('jewelery')}>jewelery</p>
+        <p className="link" onClick ={(event) => router.route === "/" && props.onClickCategory("men's clothing")}>men's clothing</p>
+        <p className="link" onClick ={(event) => router.route === "/" && props.onClickCategory("women's clothing")}>women's clothing</p>
+
     {/* this will be used for the filtering */}
-        {props.categories.map((item)=>(
+        {/* {props.categories.map((item)=>(
                   
                <p className="link" onClick ={(event) => router.route === "/" && props.onClickCategory(item)}>{item}</p>
-            )) }
+            )) } */}
 
 
  
