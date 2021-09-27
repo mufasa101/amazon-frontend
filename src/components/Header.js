@@ -65,7 +65,7 @@ function Header(props) {
           <MenuIcon className="h-7 mr-1" />
           All
         </p>
-      
+    {/* this will be used for the filtering */}
         {props.categories.map((item)=>(
                   
                <p className="link" onClick ={(event) => router.route === "/" && props.onClickCategory(item)}>{item}</p>
